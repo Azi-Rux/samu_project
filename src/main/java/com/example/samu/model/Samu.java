@@ -19,7 +19,7 @@ public class Samu {
 
 
     @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name = "samu_fid",referencedColumnName = "idSamu")
+    @JoinColumn(name = "samu_fid",referencedColumnName = "id_samu")
     List<User> users = new ArrayList<>();
 
     @OneToOne(fetch = FetchType.LAZY,cascade = CascadeType.ALL)

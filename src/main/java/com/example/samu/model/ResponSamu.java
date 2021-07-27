@@ -1,10 +1,12 @@
 package com.example.samu.model;
 
+import lombok.Data;
+
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "resp_samu")
+@Data
 public class ResponSamu extends User{
 
     private String tel;

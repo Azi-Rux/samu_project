@@ -1,12 +1,14 @@
 package com.example.samu.model;
 
+import lombok.Data;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "smur")
-public class Smur {
+@Data
+public class Smur extends User{
 
     private String mission;
     private String departement;

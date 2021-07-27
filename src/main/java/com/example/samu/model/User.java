@@ -4,14 +4,13 @@ import lombok.Data;
 
 import javax.persistence.*;
 
-@MappedSuperclass
+@Entity
 @Data
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public class User {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_user",nullable = false,updatable = false)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
 
     private Long sip;
@@ -20,4 +19,5 @@ public class User {
     private String login;
 
     private String mdp;
+
 }

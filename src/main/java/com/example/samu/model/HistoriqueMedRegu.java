@@ -1,5 +1,6 @@
 package com.example.samu.model;
 
+import lombok.Data;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
@@ -7,7 +8,7 @@ import java.time.LocalDateTime;
 import java.util.Date;
 
 @Entity
-@Table(name = "historique_med_regul")
+@Data
 public class HistoriqueMedRegu {
 
     @Id
@@ -21,7 +22,7 @@ public class HistoriqueMedRegu {
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
     private LocalDateTime heureFin;
 
-    @OneToOne(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
-    @JoinColumn(name = "doss_fid")
-    private Dossier dossier ;
+    @OneToOne
+    private Dossier dossier1;
+
 }

@@ -1,5 +1,6 @@
 package com.example.samu.model;
 
+import lombok.Data;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
@@ -7,6 +8,7 @@ import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "affectationSmur")
+@Data
 public class AffectationSmur {
 
     @Id

@@ -4,11 +4,13 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
+@Entity
+@Table(name = "ville")
 public class Ville {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_user",nullable = false,updatable = false)
+    @Column(name = "id_ville",nullable = false,updatable = false)
     private Long idVille;
 
     @Column(name = "name_ville",nullable = false,updatable = false)
@@ -20,6 +22,6 @@ public class Ville {
     private Samu samu;
 
     @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name = "ville_fid",referencedColumnName = "idVille")
+    @JoinColumn(name = "ville_fid",referencedColumnName = "id_ville")
     List<Hopital> hopitals = new ArrayList<>();
 }

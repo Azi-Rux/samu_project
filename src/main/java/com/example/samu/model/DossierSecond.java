@@ -7,6 +7,7 @@ import java.util.List;
 @Entity
 @Table(name = "dossierSecond")
 public class DossierSecond extends Dossier{
+
     private String specialite;
     private String service;
     private String structure;

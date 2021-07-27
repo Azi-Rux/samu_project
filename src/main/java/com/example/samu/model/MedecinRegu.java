@@ -1,11 +1,13 @@
 package com.example.samu.model;
 
+import lombok.Data;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "medc_regu")
+@Data
 public class MedecinRegu extends User{
 
     private String tel;

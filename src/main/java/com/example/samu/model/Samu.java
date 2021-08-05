@@ -1,10 +1,13 @@
 package com.example.samu.model;
 
+import lombok.Data;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
+@Data
 @Table(name = "samu")
 public class Samu {
     @Id
@@ -14,7 +17,7 @@ public class Samu {
 
     private String nameSamu;
 
-    private Long sipSamu;
+    private int sipSamu;
 
 
 

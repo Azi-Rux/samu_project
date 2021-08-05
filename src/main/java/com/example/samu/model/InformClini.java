@@ -1,8 +1,11 @@
 package com.example.samu.model;
 
+import lombok.Data;
+
 import javax.persistence.*;
 
 @Entity
+@Data
 @Table(name = "inform_clini")
 public class InformClini {
 

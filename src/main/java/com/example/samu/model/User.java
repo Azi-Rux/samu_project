@@ -13,11 +13,19 @@ public class User {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
 
-    private Long sip;
+    private int sip;
 
     @Column(unique = true)
     private String login;
 
     private String mdp;
 
+    public User(){}
+
+    public User(Long id, int sip, String login, String mdp) {
+        this.id = id;
+        this.sip = sip;
+        this.login = login;
+        this.mdp = mdp;
+    }
 }

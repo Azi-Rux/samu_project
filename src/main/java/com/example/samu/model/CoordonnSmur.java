@@ -1,5 +1,6 @@
 package com.example.samu.model;
 
+import lombok.Data;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
@@ -8,6 +9,7 @@ import java.util.Date;
 
 @Entity
 @Table(name = "coordSmur")
+@Data
 public class CoordonnSmur {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

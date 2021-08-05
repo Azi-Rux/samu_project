@@ -1,10 +1,13 @@
 package com.example.samu.model;
 
+import lombok.Data;
+
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "caller")
+@Data
 public class Caller {
 
     @Id

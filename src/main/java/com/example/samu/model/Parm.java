@@ -16,7 +16,10 @@ public class Parm extends User{
     private String email;
 
 
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany
     List<Dossier> dossiers = new ArrayList<>();
+
+    @OneToOne(fetch = FetchType.LAZY,cascade = CascadeType.ALL,mappedBy = "parm")
+    private Dossier dossier;
 
 }

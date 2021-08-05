@@ -35,4 +35,7 @@ public class Smur extends User{
 
     @OneToMany(cascade = CascadeType.ALL)
     List<Dossier> dossiers = new ArrayList<>();
+
+    @OneToOne(fetch = FetchType.LAZY,cascade = CascadeType.ALL,mappedBy = "smur")
+    private DossierPrimaire dossier_prim;
 }
